@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders with a component prop without crashing 1`] = `
+<button>
+  button
+</button>
+`;
+
+exports[`It renders with a render prop without crashing 1`] = `<div />`;
+
+exports[`It renders with children without crashing 1`] = `
+<div
+  onClick={[Function]}
+>
+  <div />
+</div>
+`;
