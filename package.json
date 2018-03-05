@@ -2,24 +2,33 @@
   "name": "react-copy",
   "version": "1.0.0",
   "description": "React wrapper for clipboard-polyfill",
-  "main": "src/index.js",
+  "main": "dist/clipboard.cjs.js",
+  "module": "dist/clipboard.esm.js",
+  "browser": "dist/clipboard.umd.js",
   "author": "Jonathan Grim",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "yarn clean && BABEL_ENV=production rollup -c",
+    "clean": "rm -rf ./dist/",
     "lint": "./node_modules/.bin/eslint --ext .jsx --ext .js src/",
-    "test": "jest"
+    "test": "BABEL_ENV=test jest"
   },
   "dependencies": {
-    "clipboard-polyfill": "^2.4.6"
+    "clipboard-polyfill": "^2.4.6",
+    "prop-types": "^15.6.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
@@ -29,7 +38,11 @@
     "jest": "^22.4.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "rollup": "^0.56.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.3"
   },
   "jest": {
     "clearMocks": true,
