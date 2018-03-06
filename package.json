@@ -1,12 +1,13 @@
 {
-  "name": "react-copy",
+  "name": "react-clipboard-component",
   "version": "1.0.0",
-  "description": "React wrapper for clipboard-polyfill",
+  "description": "React clipboard component and wrapper for clipboard-polyfill",
   "main": "dist/clipboard.cjs.js",
   "module": "dist/clipboard.esm.js",
   "browser": "dist/clipboard.umd.js",
   "author": "Jonathan Grim",
   "license": "MIT",
+  "repository": "github:jongrim/react-clipboard-component",
   "files": [
     "dist"
   ],
@@ -21,8 +22,8 @@
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
