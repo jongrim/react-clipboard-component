@@ -14,9 +14,10 @@
         "node": true
     },
     "parserOptions": {
-        "ecmaVersion": 2018,
+        "ecmaVersion": 2016,
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "experimentalObjectRestSpread": true
         },
         "sourceType": "module"
     },
