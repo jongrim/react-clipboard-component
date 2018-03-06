@@ -23,7 +23,7 @@ These instructions will get you a copy of the project up and running on your loc
 This module is distributed with [npm](https://npmjs.org) which comes with [node](https://nodejs.org). It is a [React](https://reactjs.org) component that is meant to be included in an existing project. You should add it to your project's dependencies like so:
 
 ```
-npm i react-clipboard-component
+npm i --save react-clipboard-component
 ```
 
 Once installed, import or require it wherever you need it!
