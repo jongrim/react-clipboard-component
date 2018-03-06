@@ -1,5 +1,5 @@
 {
-  "name": "react-clipboard-component",
+  "name": "react-clipboard-polyfill",
   "version": "1.0.0",
   "description":
     "React clipboard component based on clipboard-polyfill which provides a Promise based clipboard",
@@ -8,7 +8,7 @@
   "browser": "dist/clipboard.umd.js",
   "author": "Jonathan Grim",
   "license": "MIT",
-  "repository": "github:jongrim/react-clipboard-component",
+  "repository": "github:jongrim/react-clipboard-polyfill",
   "files": ["dist"],
   "scripts": {
     "build": "yarn clean && BABEL_ENV=production rollup -c",

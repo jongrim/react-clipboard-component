@@ -1,7 +1,7 @@
-# react-clipboard-component (snazzy title, eh?)
+# react-clipboard-polyfill (snazzy title, eh?)
 
 ```jsx
-import Clipboard from 'react-clipboard-component';
+import Clipboard from 'react-clipboard-polyfill';
 
 const MyComponent = () => (
   <Clipboard
@@ -23,13 +23,13 @@ These instructions will get you a copy of the project up and running on your loc
 This module is distributed with [npm](https://npmjs.org) which comes with [node](https://nodejs.org). It is a [React](https://reactjs.org) component that is meant to be included in an existing project. You should add it to your project's dependencies like so:
 
 ```
-npm i --save react-clipboard-component
+npm i --save react-clipboard-polyfill
 ```
 
 Once installed, import or require it wherever you need it!
 
 ```jsx
-import Clipboard from 'react-clipboard-component'
+import Clipboard from 'react-clipboard-polyfill'
 ...
 const Clipboard = require('Clipboard');
 ```
@@ -44,7 +44,7 @@ I'm only distributing CommonJS and ESM bundles at the moment. If you need a diff
 Use a render prop to receive the `copyText` and `copyData` methods.
 
 ```jsx
-import Clipboard from 'react-clipboard-component';
+import Clipboard from 'react-clipboard-polyfill';
 
 const MyComponent = () => (
   <Clipboard
@@ -59,7 +59,7 @@ const MyComponent = () => (
 Works just like the render prop, but you can provide a component which will be rendered with the `copyText` and `copyData` functions, along with any other props that were added to `Clipboard`.
 
 ```jsx
-import Clipboard from 'react-clipboard-component';
+import Clipboard from 'react-clipboard-polyfill';
 
 const Button = ({ copyText, copyData }) => (
   <button onClick={() => copyText('test').then(() => done())}>button</button>
@@ -74,7 +74,7 @@ const MyComponent = () => (
 You can also use `Clipboard` to automatically copy the text or data you specify when an area is clicked by composing it around your other components. If `Clipboard` is not given a render or component prop, it automatically adds an `onClick` handler and wraps its children in a div tag. Speficy the data or text to copy by passing it as props to `Clipboard`
 
 ```jsx
-import Clipboard from 'react-clipboard-component';
+import Clipboard from 'react-clipboard-polyfill';
 
 const MyComponent = () => (
   <Clipboard text="test">
@@ -86,7 +86,7 @@ const MyComponent = () => (
 or
 
 ```jsx
-import Clipboard from 'react-clipboard-component';
+import Clipboard from 'react-clipboard-polyfill';
 
 const MyComponent = () => (
   <Clipboard data="<i>Copy HTML!</i>" dataType="text/html">
@@ -98,7 +98,7 @@ const MyComponent = () => (
 If you want to respond to the copy event, you can pass a callback as an `onCopy` prop, and it will be called after the text or data is copied.
 
 ```jsx
-import Clipboard from 'react-clipboard-component';
+import Clipboard from 'react-clipboard-polyfill';
 
 const onCopy = () => alert('You got data!');
 
@@ -113,8 +113,8 @@ const MyComponent = () => (
 
 To run the tests locally, first make sure you've setup the local project with the following:
 ```
-git clone git@github.com:jongrim/react-clipboard-component.git
-cd ./react-clipboard-component
+git clone git@github.com:jongrim/react-clipboard-polyfill.git
+cd ./react-clipboard-polyfill
 npm i
 ```
 
