@@ -1,16 +1,15 @@
 {
   "name": "react-clipboard-component",
   "version": "1.0.0",
-  "description": "React clipboard component and wrapper for clipboard-polyfill",
+  "description":
+    "React clipboard component based on clipboard-polyfill which provides a Promise based clipboard",
   "main": "dist/clipboard.cjs.js",
   "module": "dist/clipboard.esm.js",
   "browser": "dist/clipboard.umd.js",
   "author": "Jonathan Grim",
   "license": "MIT",
   "repository": "github:jongrim/react-clipboard-component",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "yarn clean && BABEL_ENV=production rollup -c",
     "clean": "rm -rf ./dist/",
