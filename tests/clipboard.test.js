@@ -128,7 +128,7 @@ describe('With children', () => {
       wrapper.simulate('click');
     } catch (e) {}
     expect(clipboard.write).not.toHaveBeenCalled();
-  })
+  });
 
   test('it calls clipboard.write with the data and dataType props', () => {
     const wrapper = shallow(
@@ -139,5 +139,16 @@ describe('With children', () => {
     wrapper.simulate('click');
     expect(clipboard.write.mock.calls[0][0].data).toBe('<b>test</b>');
     expect(clipboard.write.mock.calls[0][0].dataType).toBe('text/html');
+  });
+
+  test('it calls the onCopy prop after copying text', () => {
+    const onCopy = jest.fn();
+    const wrapper = shallow(
+      <Clipboard data="<b>test</b>" dataType="text/html" onCopy={onCopy}>
+        <div id="div" />
+      </Clipboard>
+    );
+    wrapper.simulate('click');
+    expect(onCopy).toHaveBeenCalled;
   });
 });
