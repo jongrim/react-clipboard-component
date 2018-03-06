@@ -1,8 +1,16 @@
 {
   "name": "react-clipboard-polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "React clipboard component based on clipboard-polyfill which provides a Promise based clipboard",
+  "keywords": [
+    "clipboard",
+    "react",
+    "clipboard-polyfill",
+    "copy",
+    "polyfill",
+    "copying"
+  ],
   "main": "dist/clipboard.cjs.js",
   "module": "dist/clipboard.esm.js",
   "browser": "dist/clipboard.umd.js",
