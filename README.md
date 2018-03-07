@@ -8,7 +8,7 @@ const MyComponent = () => (
     render={({ copyText }) => (
       <div onClick={() => copyText('Your text here').then(() => anythingYouWant())} />
     )}
-  >
+  />
 )
 ```
 
@@ -36,6 +36,9 @@ const Clipboard = require('Clipboard');
 
 I'm only distributing CommonJS and ESM bundles at the moment. If you need a different format, leave an issue and let me know!
 
+**A note on Promises**
+The package `clipboard-polyfill` provides an asynchronous clipboard API using promises. As such, the author chose to bundle [`es6-promise polyfill`](https://github.com/stefanpenner/es6-promise) with it so that it would be usable in older browsers. Since this package bundles `clipboard-polyfill`, you in turn also receive the polyfill.
+
 ### Usage
 
 `Clipboard` is a standalone component that comes bundled with [clipboard-polyfill](https://github.com/lgarron/clipboard-polyfill). It wraps its methods in a way that is convenient to use within React. The component supports three methods for accessing the copy functions and I'll discuss each next, with examples:
@@ -51,7 +54,7 @@ const MyComponent = () => (
     render={({ copyData, copyText }) => (
       <div onClick={() => copyText('test').then(() => anythingYouWant())} />
     )}
-  >
+  />
 )
 ```
 
