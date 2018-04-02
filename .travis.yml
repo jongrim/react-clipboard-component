@@ -4,3 +4,4 @@ node_js:
   - "node"
 install:
   - yarn global add codecov
+  - yarn
