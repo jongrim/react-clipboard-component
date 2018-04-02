@@ -1,5 +1,9 @@
 # react-clipboard-polyfill (snazzy title, eh?)
 
+
+
+[![Build Status](https://travis-ci.org/jongrim/react-clipboard-polyfill.svg?branch=master)](https://travis-ci.org/jongrim/react-clipboard-polyfill)[![codecov](https://codecov.io/gh/jongrim/react-clipboard-polyfill/branch/master/graph/badge.svg)](https://codecov.io/gh/jongrim/react-clipboard-polyfill)
+
 ```jsx
 import Clipboard from 'react-clipboard-polyfill';
 
