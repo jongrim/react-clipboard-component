@@ -56,6 +56,24 @@ describe('With a render prop', () => {
     );
     wrapper.find('#div').simulate('click');
   });
+
+  test('it pass the clipboard', done => {
+    const wrapper = mount(
+      <Clipboard
+        render={({ clipboard }) => (
+          <div
+            id="div"
+            onClick={() => {
+              if (clipboard) {
+                done();
+              }
+            }}
+          />
+        )}
+      />
+    );
+    wrapper.find('#div').simulate('click');
+  });
 });
 
 describe('With a component prop', () => {
@@ -71,6 +89,23 @@ describe('With a component prop', () => {
   test('it passes the copyData function', done => {
     const Button = ({ copyText, copyData }) => (
       <button onClick={() => copyData('text/plain', 'test').then(text => done())}>button</button>
+    );
+
+    const wrapper = mount(<Clipboard component={Button} />);
+    wrapper.find('button').simulate('click');
+  });
+
+  test('it pass the clipboard', done => {
+    const Button = ({ clipboard }) => (
+      <button
+        onClick={() => {
+          if (clipboard) {
+            done();
+          }
+        }}
+      >
+        button
+      </button>
     );
 
     const wrapper = mount(<Clipboard component={Button} />);
